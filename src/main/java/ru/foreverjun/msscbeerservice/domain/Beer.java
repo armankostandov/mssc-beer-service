@@ -1,4 +1,4 @@
-package ru.foreverjun.msscbeerservice.web.domain;
+package ru.foreverjun.msscbeerservice.domain;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;

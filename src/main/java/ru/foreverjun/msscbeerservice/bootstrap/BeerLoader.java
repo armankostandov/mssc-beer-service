@@ -1,11 +1,11 @@
-package ru.foreverjun.msscbeerservice.web.bootstrap;
+package ru.foreverjun.msscbeerservice.bootstrap;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import ru.foreverjun.msscbeerservice.web.domain.Beer;
+import ru.foreverjun.msscbeerservice.domain.Beer;
 import ru.foreverjun.msscbeerservice.web.model.BeerStyleEnum;
-import ru.foreverjun.msscbeerservice.web.repositories.BeerRepository;
+import ru.foreverjun.msscbeerservice.repositories.BeerRepository;
 
 import java.math.BigDecimal;
 

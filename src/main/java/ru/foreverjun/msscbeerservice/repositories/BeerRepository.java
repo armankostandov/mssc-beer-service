@@ -1,7 +1,7 @@
-package ru.foreverjun.msscbeerservice.web.repositories;
+package ru.foreverjun.msscbeerservice.repositories;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
-import ru.foreverjun.msscbeerservice.web.domain.Beer;
+import ru.foreverjun.msscbeerservice.domain.Beer;
 
 import java.util.UUID;
 
