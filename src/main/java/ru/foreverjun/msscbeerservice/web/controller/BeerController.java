@@ -18,17 +18,17 @@ public class BeerController {
     private final BeerService beerService;
 
     @GetMapping("/{beerId}")
-    public BeerDto getBeerById(@PathVariable UUID beerId) {
-        return beerService.getById(beerId);
+    public ResponseEntity<BeerDto> getBeerById(@PathVariable UUID beerId) {
+        return new ResponseEntity<>(beerService.getById(beerId), HttpStatus.OK);
     }
 
     @PostMapping
-    public BeerDto saveNewBeer(@Validated @RequestBody BeerDto beerDto) {
-        return beerService.saveNewBear(beerDto);
+    public ResponseEntity<BeerDto> saveNewBeer(@RequestBody @Validated BeerDto beerDto) {
+        return new ResponseEntity<>(beerService.saveNewBeer(beerDto), HttpStatus.CREATED);
     }
 
     @PutMapping("/{beerId}")
-    public BeerDto updateBeerById(@PathVariable UUID beerId, @Validated @RequestBody BeerDto beerDto) {
-        return beerService.updateBearById(beerId, beerDto);
+    public ResponseEntity<BeerDto> updateBeerById(@PathVariable UUID beerId, @Validated @RequestBody BeerDto beerDto) {
+        return new ResponseEntity<>(beerService.updateBearById(beerId, beerDto), HttpStatus.NO_CONTENT);
     }
 }
